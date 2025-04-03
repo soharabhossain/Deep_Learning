@@ -1,0 +1,67 @@
+Sequence Processing with Recurrent Neural Networks (RNN) & LSTM 
+==============================================================
+Coding Demo-1: Sequence Prediction with RNN
+Synthetic data
+
+Coding Demo-2: Text Classification with LSTM 
+
+Analyze IMDB Movie Reviews for Sentiment Analysis - Binary Classification into Positive/Negative sentiments.  
+
+How to preprocess a Corpus(Dataset)
+-------------------------------------
+Steps:
+1. Extract the words from the text (word_tokenizer)
+We have to build a vocabulary of all the unique words (Python dictionary)
+key -> integer values
+value-> words
+
+2. Every word has to be integer encoded (Tokenizer)
+ actor >  34
+ 34: actor
+
+happy > 100
+the movie is great
+1 12 6 200
+
+3. Pad sequences to equal length
+
+4. Embedding - dense vector representation of a word (when we will build the LSTM network)
+ 34  > [0.32  -0.45  0.55  0.9  -0.5] (hints: Word Embedding - Word2Vec, GloVE)
+
+
+Discussion Points:
+
+Predicting the next word:
+---------------------------------
+This is a wonderful day. The sun is shining bright. Over my head I can see the blue sky. 
+(textual content - text processing - NLP)
+
+She said, "Teddy bears are on sale!!!"
+She said, "Teddy  Roosevelt was a great President."
+
+Long-range dependencies:
+----------------------------------
+The boy who played football all through the afternoon, was tired.
+The boys who played football all through the afternoon, were tired.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Links to Other Resources
+---------------------------------
+
+Keras API Docs:
+---------------------
+https://keras.io/api/layers/recurrent_layers/simple_rnn/
+https://keras.io/api/layers/recurrent_layers/lstm/
+https://keras.io/api/layers/core_layers/embedding/
+
+Natural Language Toolkit (NLTK):
+---------------------------------------------
+https://www.nltk.org/
+https://www.nltk.org/_modules/nltk/tokenize/punkt.html
+
+Text Processing with Tensorflow/Keras:
+----------------------------------------------------
+https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/text/Tokenizer
+https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/sequence
+https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/sequence/pad_sequences
