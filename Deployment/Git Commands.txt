@@ -1,0 +1,32 @@
+
+# To to GitHub and create a new repository named "render_demo"
+Copy the git link e.g, https://github.com/soharabhossain/render_demo.git
+
+
+# Open a local terminal inside the deployment folder "Deploy".
+All the files and folders inside the Deploy folder needs to be uploaded to a cloud service (e.g. Render.com)
+for deployment.
+
+---------------------------------------------
+# Execute the following Git commands in this sequence to push the deployment code in the remote GitHub repo.
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/soharabhossain/render_demo.git
+git push -u origin main
+---------------------------------------------
+Alternatively you may use the web-inteface to upload all the files and folders fro the Deploy directory directly in the repository.
+---------------------------------------------
+
+
+# Got to www.render.com and login to your account using Github.
+Click on the new button and create a webapp.
+Select the Github repository render_demo as the source to fetch from for deployment.
+Put a name and keep all the parameters to default, set the Start Command to gunicord app:app
+Click on Manual Deploy and Deploy from Latest Commit
+After the deployment will successful complete, a weblink of the app will be provided.
+
+
+		 
